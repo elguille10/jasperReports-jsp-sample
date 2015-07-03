@@ -2,7 +2,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 
 <%@ page import="
-	java.io.OutputStream ,
 	org.utilities.dataaccesslayer.DataSource ,
 	org.utilities.dataaccesslayer.ConnectionDataSource ,
 	org.utilities.reports.JReport
@@ -17,23 +16,17 @@
 </head>
 <body>
 	<%
+		/*
 		DataSource ds = new DataSource(	0, "localhost", "sales" );
 		ConnectionDataSource cds = new ConnectionDataSource( "root", "123", ds );
 		cds.connect();
 
-		OutputStream outStream = response.getOutputStream();
-		response.setContentType( "application/pdf" );
-
 		JReport simpleReport = new JReport( "sales", "sales", "C://devEnviroment//reports//sales.jasper" );
 		simpleReport.generateReportFromPath( cds.getConnection() );
-		simpleReport.embeddedPDF( outStream ); // execute a embedded PDF viewer in a JSP 
 
-		//simpleReport.showViewer(); -- open a viewer in a desktop
-		
-		out.clear();
-		out = pageContext.pushBody();
-		outStream.close();
-		cds.disconnect();
+		simpleReport.showViewer(); // open a viewer in a desktop
+
+		cds.disconnect();*/
 	%>
 </body>
 </html>
